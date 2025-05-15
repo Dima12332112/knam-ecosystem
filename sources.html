@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация источников | KNAM Ecosystem</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Боковая навигация -->
+    <aside class="fixed top-0 left-0 h-screen w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-center h-16 border-b">
+            <h1 class="text-xl font-bold text-gray-800">KNAM Ecosystem</h1>
+        </div>
+        <nav class="p-4">
+            <a href="index.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-dashboard-line mr-3"></i>
+                Дашборд
+            </a>
+            <a href="sources.html" class="flex items-center p-3 text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg">
+                <i class="ri-database-2-line mr-3"></i>
+                Генерация источников
+            </a>
+            <a href="analytics.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-bar-chart-line mr-3"></i>
+                Аналитика
+            </a>
+            <a href="telephony.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-phone-line mr-3"></i>
+                Телефония
+            </a>
+            <a href="marketplace.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-store-2-line mr-3"></i>
+                Маркетплейс
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="ml-64 p-8">
+        <div class="max-w-7xl mx-auto">
+            <header class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Генерация источников</h2>
+                <p class="text-gray-600">Управление и создание новых источников данных</p>
+            </header>
+
+            <!-- Кнопка создания нового источника -->
+            <button class="mb-8 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg flex items-center hover:from-blue-600 hover:to-blue-700">
+                <i class="ri-add-line mr-2"></i>
+                Создать новый источник
+            </button>
+
+            <!-- Карточки источников -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Пример карточки источника -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Источник #1</h3>
+                            <p class="text-sm text-gray-500">Создан: 15.05.2024</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="p-2 text-gray-400 hover:text-blue-500">
+                                <i class="ri-edit-line"></i>
+                            </button>
+                            <button class="p-2 text-gray-400 hover:text-red-500">
+                                <i class="ri-delete-bin-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="ri-database-2-line mr-2"></i>
+                            <span>Тип: База данных</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="ri-file-list-line mr-2"></i>
+                            <span>Записей: 1,234</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="ri-time-line mr-2"></i>
+                            <span>Последнее обновление: 2 часа назад</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t">
+                        <button class="w-full px-4 py-2 text-blue-500 border border-blue-500 rounded-lg hover:bg-blue-50">
+                            Просмотреть детали
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
