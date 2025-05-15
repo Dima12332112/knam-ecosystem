@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КНАМ Экосистема</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066FF',
+                        secondary: '#00BFFF',
+                        accent: '#4169E1',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #0066FF, #00BFFF);
+        }
+        .gradient-secondary {
+            background: linear-gradient(135deg, #1E90FF, #87CEEB);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Sidebar Navigation -->
+    <nav class="fixed top-0 left-0 h-screen w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out"
+         id="sidebar">
+        <div class="flex flex-col h-full">
+            <!-- Logo -->
+            <div class="p-6">
+                <div class="gradient-primary text-white p-4 rounded-lg">
+                    <h1 class="text-2xl font-bold">КНАМ</h1>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex-1 px-4">
+                <div class="space-y-2">
+                    <a href="#dashboard" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                        <i class="ri-dashboard-line text-xl"></i>
+                        <span>Дашборд</span>
+                    </a>
+                    <a href="#sources" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                        <i class="ri-database-2-line text-xl"></i>
+                        <span>Источники</span>
+                    </a>
+                    <a href="#analytics" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                        <i class="ri-bar-chart-line text-xl"></i>
+                        <span>Аналитика</span>
+                    </a>
+                    <a href="#calls" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                        <i class="ri-phone-line text-xl"></i>
+                        <span>Телефония</span>
+                    </a>
+                    <a href="#marketplace" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-
+                          <!-- Main Content -->
+    <main class="ml-64 p-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800">Дашборд</h2>
+            <div class="flex items-center space-x-4">
+                <button class="px-4 py-2 gradient-primary text-white rounded-lg flex items-center space-x-2 hover:shadow-lg transition-all duration-300">
+                    <i class="ri-add-line"></i>
+                    <span>Новый проект</span>
+                </button>
+                <button class="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-all duration-300">
+                    <i class="ri-notification-3-line text-xl"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dashboard Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Stats Cards -->
+            <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium text-gray-700">Активные источники</h3>
+                    <i class="ri-database-2-line text-primary text-xl"></i>
+                </div>
+                <p class="text-3xl font-bold text-gray-900 mt-4">1,234</p>
+                <div class="flex items-center space-x-2 mt-2">
+                    <span class="text-green-500 flex items-center">
+                        <i class="ri-arrow-up-line"></i>
+                        12.5%
+                    </span>
+                    <span class="text-gray-500 text-sm">vs прошлый месяц</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium text-gray-700">Конверсия</h3>
+                    <i class="ri-percent-line text-primary text-xl"></i>
+                </div>
+                <p class="text-3xl font-bold text-gray-900 mt-4">8.7%</p>
+                <div class="flex items-center space-x-2 mt-2">
+                    <span class="text-red-500 flex items-center">
+                        <i class="ri-arrow-down-line"></i>
+                        2.1%
+                    </span>
+                    <span class="text-gray-500 text-sm">vs прошлая неделя</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium text-gray-700">Активные звонки</h3>
+                    <i class="ri-phone-line text-primary text-xl"></i>
+                </div>
+                <p class="text-3xl font-bold text-gray-900 mt-4">42</p>
+                <div class="flex items-center space-x-2 mt-2">
+                    <span class="text-green-500 flex items-center">
+                        <i class="ri-arrow-up-line"></i>
+                        5.3%
+                    </span>
+                    <span class="text-gray-500 text-sm">сейчас</span>
+                </div>
+            </div>
+        </div>
+            <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Инициализация графиков
+        document.addEventListener('DOMContentLoaded', function() {
+            // График звонков
+            const callsCtx = document.getElementById('callsChart').getContext('2d');
+            new Chart(callsCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+                    datasets: [{
+                        label: 'Количество звонков',
+                        data: [65, 59, 80, 81, 56, 55, 40],
+                        fill: true,
+                        borderColor: '#0066FF',
+                        backgroundColor: 'rgba(0, 102, 255, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {    
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // График источников
+            const sourcesCtx = document.getElementById('sourcesChart').getContext('2d');
+            new Chart(sourcesCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Источник 1', 'Источник 2', 'Источник 3', 'Источник 4', 'Источник 5'],
+                    datasets: [{
+                        label: 'Конверсия',
+                        data: [12, 19, 3, 5, 2],
+                        backgroundColor: [
+                            'rgba(0, 102, 255, 0.8)',
+                            'rgba(0, 191, 255, 0.8)',
+                            'rgba(30, 144, 255, 0.8)',
+                            'rgba(135, 206, 235, 0.8)',
+                            'rgba(65, 105, 225, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
