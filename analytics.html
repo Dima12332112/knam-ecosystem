@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналитика | KNAM Ecosystem</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Боковая навигация -->
+    <aside class="fixed top-0 left-0 h-screen w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-center h-16 border-b">
+            <h1 class="text-xl font-bold text-gray-800">KNAM Ecosystem</h1>
+        </div>
+        <nav class="p-4">
+            <a href="index.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-dashboard-line mr-3"></i>
+                Дашборд
+            </a>
+            <a href="sources.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-database-2-line mr-3"></i>
+                Генерация источников
+            </a>
+            <a href="analytics.html" class="flex items-center p-3 text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg">
+                <i class="ri-bar-chart-line mr-3"></i>
+                Аналитика
+            </a>
+            <a href="telephony.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-phone-line mr-3"></i>
+                Телефония
+            </a>
+            <a href="marketplace.html" class="flex items-center p-3 text-gray-700 hover:bg-blue-50 rounded-lg">
+                <i class="ri-store-2-line mr-3"></i>
+                Маркетплейс
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="ml-64 p-8">
+        <div class="max-w-7xl mx-auto">
+            <header class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Аналитика</h2>
+                <p class="text-gray-600">Анализ данных и статистика</p>
+            </header>
+
+            <!-- Фильтры -->
+            <div class="mb-8 flex space-x-4">
+                <select class="px-4 py-2 border rounded-lg text-gray-700">
+                    <option>За последние 7 дней</option>
+                    <option>За последний месяц</option>
+                    <option>За последний год</option>
+                </select>
+                <select class="px-4 py-2 border rounded-lg text-gray-700">
+                    <option>Все источники</option>
+                    <option>Источник #1</option>
+                    <option>Источник #2</option>
+                </select>
+                <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg">
+                    Применить
+                </button>
+            </div>
+
+            <!-- Графики -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <!-- График 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4">Активность по дням</h3>
+                    <canvas id="activityChart" height="300"></canvas>
+                </div>
+                <!-- График 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4">Распределение по типам</h3>
+                    <canvas id="typesChart" height="300"></canvas>
+                </div>
+            </div>
+
+            <!-- Таблица с данными -->
+            <div class="bg-white rounded-lg shadow-sm">
+                <div class="p-6 border-b">
+                    <h3 class="text-lg font-semibold">Детальная статистика</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Дата</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Источник</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Показатель</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Значение</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 text-sm text-gray-900">15.05.2024</td>
+                                <td class="px-6 py-4 text-sm text-gray-900">Источник #1</td>
+                                <td class="px-6 py-4 text-sm text-gray-900">Конверсия</td>
+                                <td class="px-6 py-4 text-sm text-gray-900">15.4%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-sm text-gray-900">15.05.2024</td>
+                                <td class="px-6 py-4 text-sm text-gray-900">Источник #2</td>
+                                <td class="px-6 py-4 text-sm text-gray-900">Конверсия</td>
+                                <td class="px-6 py-4 text-sm text-gray-900">12.8%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Инициализация графиков
+        const activityChart = new Chart(document.getElementById('activityChart'), {
+            type: 'line',
+            data: {
+                labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+                datasets: [{
+                    label: 'Активность',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    borderColor: '#3B82F6',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        const typesChart = new Chart(document.getElementById('typesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Тип 1', 'Тип 2', 'Тип 3'],
+                datasets: [{
+                    data: [300, 150, 100],
+                    backgroundColor: ['#3B82F6', '#60A5FA', '#93C5FD']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html> 
