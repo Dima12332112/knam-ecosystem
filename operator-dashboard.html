@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дашборд оператора | KNAM Ecosystem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="css/operator-dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Боковая навигация -->
+    <aside class="fixed top-0 left-0 h-screen w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-center h-16 border-b">
+            <div class="logo">
+                <div class="logo-icon">K</div>
+                <div class="logo-text">KnamConnect</div>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="telephony.html" class="nav-link">
+                <i class="ri-arrow-left-line"></i>
+                Вернуться в телефонию
+            </a>
+            <a href="#dashboard" class="nav-link active" data-page="dashboard">
+                <i class="ri-dashboard-line"></i>
+                Дашборд
+            </a>
+            <a href="#stats" class="nav-link" data-page="stats">
+                <i class="ri-bar-chart-line"></i>
+                Статистика
+            </a>
+            <a href="#balance" class="nav-link" data-page="balance">
+                <i class="ri-wallet-3-line"></i>
+                Финансы
+            </a>
+            <a href="#profile" class="nav-link" data-page="profile">
+                <i class="ri-user-line"></i>
+                Профиль
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="ml-64">
+        <div class="container">
+            <div id="dashboard" class="page active">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Обзор эффективности</h2>
+                        <div id="current-date"></div>
+                    </div>
+                    <div class="metrics-grid">
+                        <div class="metric-card" onclick="showMetricDetail('calls')">
+                            <div class="metric-title">Диалоги</div>
+                            <div class="metric-value">85</div>
+                            <div class="metric-diff">норма: 100</div>
+                        </div>
+                        <div class="metric-card" onclick="showMetricDetail('leads')">
+                            <div class="metric-title">Заявки</div>
+                            <div class="metric-value">15</div>
+                            <div class="metric-diff">норма: 20</div>
+                        </div>
+                        <div class="metric-card" onclick="showMetricDetail('rating')">
+                            <div class="metric-title">Рейтинг</div>
+                            <div class="metric-value">8.9</div>
+                            <div class="metric-diff">+0.2</div>
+                        </div>
+                        <div class="metric-card" onclick="showMetricDetail('quality')">
+                            <div class="metric-title">Качество</div>
+                            <div class="metric-value">92%</div>
+                            <div class="metric-diff">+2%</div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="openWorkspace()">
+                        <i class="ri-phone-line"></i>
+                        Перейти в рабочее пространство
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">История звонков</h3>
+                        <div class="date-range-selector">
+                            <input type="date" class="date-input" id="calls-start-date">
+                            <span>—</span>
+                            <input type="date" class="date-input" id="calls-end-date">
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            <div class="chart-bar" style="height: 30%;">
+                                <div class="chart-value">15</div>
+                                <div class="chart-label">Пн</div>
+                            </div>
+                            <div class="chart-bar" style="height: 50%;">
+                                <div class="chart-value">20</div>
+                                <div class="chart-label">Вт</div>
+                            </div>
+                            <div class="chart-bar" style="height: 40%;">
+                                <div class="chart-value">18</div>
+                                <div class="chart-label">Ср</div>
+                            </div>
+                            <div class="chart-bar" style="height: 60%;">
+                                <div class="chart-value">22</div>
+                                <div class="chart-label">Чт</div>
+                            </div>
+                            <div class="chart-bar" style="height: 20%;">
+                                <div class="chart-value">10</div>
+                                <div class="chart-label">Пт</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stats" class="page">
+                <!-- Статистика будет добавлена здесь -->
+            </div>
+
+            <div id="balance" class="page">
+                <!-- Финансы будут добавлены здесь -->
+            </div>
+
+            <div id="profile" class="page">
+                <!-- Профиль будет добавлен здесь -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/operator-dashboard.js"></script>
+</body>
+</html> 

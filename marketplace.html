@@ -43,116 +43,121 @@
         <div class="max-w-7xl mx-auto">
             <header class="mb-8">
                 <h2 class="text-2xl font-bold text-gray-800">Маркетплейс</h2>
-                <p class="text-gray-600">Управление товарами и услугами</p>
+                <p class="text-gray-600">Интеграции и сервисы для вашего бизнеса</p>
             </header>
 
-            <!-- Фильтры и поиск -->
-            <div class="mb-8 flex flex-wrap gap-4">
-                <div class="flex-1 min-w-[200px]">
-                    <div class="relative">
-                        <input type="text" placeholder="Поиск товаров..." class="w-full pl-10 pr-4 py-2 border rounded-lg">
-                        <i class="ri-search-line absolute left-3 top-2.5 text-gray-400"></i>
-                    </div>
-                </div>
-                <select class="px-4 py-2 border rounded-lg text-gray-700">
-                    <option>Все категории</option>
-                    <option>Электроника</option>
-                    <option>Одежда</option>
-                    <option>Аксессуары</option>
-                </select>
-                <select class="px-4 py-2 border rounded-lg text-gray-700">
-                    <option>Сортировка</option>
-                    <option>По цене ↑</option>
-                    <option>По цене ↓</option>
-                    <option>По популярности</option>
-                </select>
-                <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg">
-                    <i class="ri-add-line mr-2"></i>
-                    Добавить товар
+            <!-- Категории -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <button class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border-2 border-blue-500">
+                    <i class="ri-phone-line text-2xl text-blue-500 mb-2"></i>
+                    <h3 class="font-semibold">Телефония</h3>
+                    <p class="text-sm text-gray-500">12 сервисов</p>
+                </button>
+                <button class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                    <i class="ri-customer-service-2-line text-2xl text-gray-500 mb-2"></i>
+                    <h3 class="font-semibold">CRM</h3>
+                    <p class="text-sm text-gray-500">8 сервисов</p>
+                </button>
+                <button class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                    <i class="ri-message-2-line text-2xl text-gray-500 mb-2"></i>
+                    <h3 class="font-semibold">Мессенджеры</h3>
+                    <p class="text-sm text-gray-500">6 сервисов</p>
+                </button>
+                <button class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+                    <i class="ri-chat-voice-line text-2xl text-gray-500 mb-2"></i>
+                    <h3 class="font-semibold">Чат-боты</h3>
+                    <p class="text-sm text-gray-500">4 сервиса</p>
                 </button>
             </div>
 
-            <!-- Статистика -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-sm text-gray-500">Всего товаров</p>
-                            <h3 class="text-2xl font-bold text-gray-800">1,234</h3>
-                        </div>
-                        <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center">
-                            <i class="ri-shopping-bag-line text-xl text-blue-500"></i>
-                        </div>
+            <!-- Фильтры -->
+            <div class="bg-white p-4 rounded-lg shadow-sm mb-8">
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex-1 min-w-[200px]">
+                        <input type="text" placeholder="Поиск сервисов..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-sm text-gray-500">Активных</p>
-                            <h3 class="text-2xl font-bold text-green-600">856</h3>
-                        </div>
-                        <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center">
-                            <i class="ri-check-line text-xl text-green-500"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-sm text-gray-500">Категорий</p>
-                            <h3 class="text-2xl font-bold text-purple-600">12</h3>
-                        </div>
-                        <div class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center">
-                            <i class="ri-price-tag-3-line text-xl text-purple-500"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-sm text-gray-500">Продаж (месяц)</p>
-                            <h3 class="text-2xl font-bold text-orange-600">432</h3>
-                        </div>
-                        <div class="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center">
-                            <i class="ri-line-chart-line text-xl text-orange-500"></i>
-                        </div>
-                    </div>
+                    <select class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Все категории</option>
+                        <option>Телефония</option>
+                        <option>CRM</option>
+                        <option>Мессенджеры</option>
+                        <option>Чат-боты</option>
+                    </select>
+                    <select class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Сортировка</option>
+                        <option>По популярности</option>
+                        <option>По рейтингу</option>
+                        <option>По цене</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Список товаров -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Карточка товара 1 -->
+            <!-- Список сервисов -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Карточка сервиса -->
                 <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <div class="relative pb-[75%] bg-gray-100">
-                        <img src="https://via.placeholder.com/300" alt="Товар 1" class="absolute inset-0 w-full h-full object-cover">
-                        <span class="absolute top-2 right-2 px-2 py-1 bg-green-500 text-white text-xs rounded">В наличии</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-gray-800 mb-2">Название товара 1</h3>
-                        <p class="text-sm text-gray-600 mb-4">Краткое описание товара в одну строку</p>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <img src="https://via.placeholder.com/40" alt="Logo" class="w-10 h-10 rounded">
+                            <span class="px-2 py-1 text-xs font-medium text-green-700 bg-green-100 rounded-full">
+                                Популярный
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Мультифон</h3>
+                        <p class="text-gray-600 text-sm mb-4">Телефония с умной маршрутизацией и аналитикой</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-lg font-bold text-gray-800">12 999 ₽</span>
-                            <button class="p-2 text-blue-500 hover:bg-blue-50 rounded-lg">
-                                <i class="ri-edit-line text-xl"></i>
+                            <div class="flex items-center">
+                                <i class="ri-star-fill text-yellow-400 mr-1"></i>
+                                <span class="text-sm font-medium">4.8</span>
+                                <span class="text-sm text-gray-500 ml-1">(234)</span>
+                            </div>
+                            <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all">
+                                Подключить
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Карточка товара 2 -->
+                <!-- Карточка сервиса -->
                 <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <div class="relative pb-[75%] bg-gray-100">
-                        <img src="https://via.placeholder.com/300" alt="Товар 2" class="absolute inset-0 w-full h-full object-cover">
-                        <span class="absolute top-2 right-2 px-2 py-1 bg-red-500 text-white text-xs rounded">Нет в наличии</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-gray-800 mb-2">Название товара 2</h3>
-                        <p class="text-sm text-gray-600 mb-4">Краткое описание товара в одну строку</p>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <img src="https://via.placeholder.com/40" alt="Logo" class="w-10 h-10 rounded">
+                            <span class="px-2 py-1 text-xs font-medium text-blue-700 bg-blue-100 rounded-full">
+                                Новый
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Амега</h3>
+                        <p class="text-gray-600 text-sm mb-4">CRM система с автоматизацией продаж</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-lg font-bold text-gray-800">8 499 ₽</span>
-                            <button class="p-2 text-blue-500 hover:bg-blue-50 rounded-lg">
-                                <i class="ri-edit-line text-xl"></i>
+                            <div class="flex items-center">
+                                <i class="ri-star-fill text-yellow-400 mr-1"></i>
+                                <span class="text-sm font-medium">4.6</span>
+                                <span class="text-sm text-gray-500 ml-1">(156)</span>
+                            </div>
+                            <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all">
+                                Подключить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка сервиса -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <img src="https://via.placeholder.com/40" alt="Logo" class="w-10 h-10 rounded">
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Telegram Bot</h3>
+                        <p class="text-gray-600 text-sm mb-4">Чат-бот для автоматизации коммуникаций</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="ri-star-fill text-yellow-400 mr-1"></i>
+                                <span class="text-sm font-medium">4.9</span>
+                                <span class="text-sm text-gray-500 ml-1">(89)</span>
+                            </div>
+                            <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all">
+                                Подключить
                             </button>
                         </div>
                     </div>
@@ -160,8 +165,7 @@
             </div>
 
             <!-- Пагинация -->
-            <div class="mt-8 flex items-center justify-between">
-                <p class="text-sm text-gray-700">Показано 8 из 1,234 товаров</p>
+            <div class="mt-8 flex justify-center">
                 <div class="flex space-x-2">
                     <button class="px-3 py-1 border rounded text-gray-600 hover:bg-gray-50">Назад</button>
                     <button class="px-3 py-1 bg-blue-500 text-white rounded">1</button>
